@@ -8,7 +8,7 @@ RUN apk add alpine-sdk
 RUN apk add git && apk add g++
 RUN apk add make && apk add python
 RUN npm install
-RUN adduser -D term
+RUN adduser -D term -s /bin/ash
 RUN echo 'term:p@ssw0rd' | chpasswd
 RUN echo "term ALL=(ALL) ALL" > /etc/sudoers
 
